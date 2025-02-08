@@ -30,6 +30,7 @@ list_of_files = [
 ]
 
 for filepath in list_of_files:
+    # generates os based file path (whether to keep forward or backward slash based on OS)
     filepath = Path(filepath)
     filedir, filename = os.path.split(filepath)
 
@@ -38,10 +39,15 @@ for filepath in list_of_files:
         logging.info(f"Creating directory:{filedir} for the file {filename}")
 
     
+    # Check if the file does not exist or if it exists but is empty
     if (not os.path.exists(filepath)) or (os.path.getsize(filepath) == 0):
-        with open(filepath,'w') as f:
-            pass
-            logging.info(f"Creating empty file: {filepath}")
+    # Open the file in write mode ('w'), which creates the file if it does not exist
+        with open(filepath, 'w') as f:
+            pass  # No content is written, just creating an empty file
+    
+        # Log that an empty file has been created
+        logging.info(f"Creating empty file: {filepath}")
 
     else:
-        logging.info(f"{filename} is already exists")
+        # If the file already exists and is not empty, log that it exists
+        logging.info(f"{filename} already exists")

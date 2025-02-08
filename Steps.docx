@@ -1,16 +1,16 @@
-env name : textS
+env name : TextSummarizer
 package name : TextSummarizer
 
 1. Create repo in github and add .gitignore, README.md and LICENSE file
 2. Create template.py file and update code and run it
 3. Push the files created to github 
 4. Create virtual environment: 
-   conda create -n textS python=3.8 -y
+   conda create -n TextSummarizer python=3.9 -y
 5. Activate environment : conda activate textS
 6. Update requirements.txt (-e . will call for setup.py file and install the local package)
 7. Write code for setup.py file so that it will install the local package
 8. Run pip install -r requirements.txt
 9. Writing code for logging in src/logging/__init__.py file
-10. Write code for utils/commom.py file
+10. Write code for utils/common.py file
 
 
