@@ -6,7 +6,7 @@ package name : TextSummarizer
 3. Push the files created to github 
 4. Create virtual environment: 
    conda create -n TextSummarizer python=3.9 -y
-5. Activate environment : conda activate textS
+5. Activate environment : conda activate TextSummarizer
 6. Update requirements.txt (-e . will call for setup.py file and install the local package)
 7. Write code for setup.py file so that it will install the local package
 8. Run pip install -r requirements.txt
